@@ -13,6 +13,21 @@
             <maven.tomcat.server>TomcatServer10</maven.tomcat.server>
             <maven.tomcat.path>/${project.build.finalName}</maven.tomcat.path>
     </properties>
+	
+	<profiles>
+        <profile>
+            <id>teacher_home</id>
+            <properties>
+                <maven.tomcat.url>http://localhost:9037/manager_old/text</maven.tomcat.url>
+            </properties>
+        </profile>
+        <profile>
+            <id>student</id>
+            <properties>
+                <maven.tomcat.url>http://localhost:8080/manager/text</maven.tomcat.url>
+            </properties>
+        </profile>
+    </profiles>
 
     <dependencies>
 
